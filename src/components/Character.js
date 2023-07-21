@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 export default function Character({character}) {
   return (
     <div className="col-3">
@@ -10,4 +11,15 @@ export default function Character({character}) {
         </div>
     </div>
   )
+}
+
+Character.propTypes = {
+    character: PropTypes.objectOf({
+        image: PropTypes.string, 
+        name: PropTypes.string, 
+        origin: PropTypes.objectOf({
+            name: PropTypes.string
+        }) 
+    })
+
 }
