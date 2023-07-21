@@ -18,18 +18,20 @@ export default function List() {
     return (
         <div>
             <h2>Characters</h2>
-            {
-                loading ? (
-                    <div>Loading...</div>
-                ) : (
-                    characters.map((character) => (
-                        <Character
-                            key={character.id}
-                            character={character}
-                        />
-                    ))
-                )
-            }
+            <div className="row">
+                {
+                    loading ? (
+                        <div>Loading...</div>
+                    ) : (
+                        characters.map((character) => (
+                            <Character
+                                key={character.id}
+                                character={character}
+                            />
+                        ))
+                    )
+                }
+            </div>
         </div>
     );
 }
